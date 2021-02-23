@@ -50,6 +50,9 @@
     </script>
  
 
+<!-- 今日诗词特效 -->
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 
 
 
@@ -339,24 +342,7 @@
 
             <div class="description center-align">
                 
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
+                    <span id="jinrishici-sentence">正在加载今日诗词....</span>
                 
             </div>
         </div>
@@ -405,19 +391,10 @@
                 </a>
                 
                 
-                <a href="/tags/%E6%8C%87%E9%92%88/" title="指针: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="指针" style="background-color: #D5F5E3;">指针
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="学习笔记" style="background-color: #E8F8F5;">学习笔记
+                            data-tagname="学习笔记" style="background-color: #D5F5E3;">学习笔记
                         <span class="tag-length">3</span>
                     </span>
                 </a>
@@ -426,7 +403,16 @@
                 <a href="/tags/ing/" title=".ing: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname=".ing" style="background-color: #FEF9E7;">.ing
+                            data-tagname=".ing" style="background-color: #E8F8F5;">.ing
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/%E6%8C%87%E9%92%88/" title="指针: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="指针" style="background-color: #FEF9E7;">指针
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -500,7 +486,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"链表","weight":1,"link":"/tags/链表/"},{"text":"C语言","weight":4,"link":"/tags/C语言/"},{"text":"指针","weight":2,"link":"/tags/指针/"},{"text":"学习笔记","weight":3,"link":"/tags/学习笔记/"},{"text":".ing","weight":2,"link":"/tags/ing/"},{"text":"回忆词条","weight":1,"link":"/tags/回忆词条/"},{"text":"记录生活","weight":3,"link":"/tags/记录生活/"},{"text":"STM32","weight":3,"link":"/tags/STM32/"},{"text":"随笔","weight":1,"link":"/tags/随笔/"},{"text":"宝贝","weight":1,"link":"/tags/宝贝/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"链表","weight":1,"link":"/tags/链表/"},{"text":"C语言","weight":4,"link":"/tags/C语言/"},{"text":"学习笔记","weight":3,"link":"/tags/学习笔记/"},{"text":".ing","weight":2,"link":"/tags/ing/"},{"text":"指针","weight":2,"link":"/tags/指针/"},{"text":"回忆词条","weight":1,"link":"/tags/回忆词条/"},{"text":"记录生活","weight":3,"link":"/tags/记录生活/"},{"text":"STM32","weight":3,"link":"/tags/STM32/"},{"text":"随笔","weight":1,"link":"/tags/随笔/"},{"text":"宝贝","weight":1,"link":"/tags/宝贝/"}], {
         autoResize: true
     });
 </script>
@@ -684,8 +670,10 @@
 <script src="//code.tidio.co/upbwivkmf5y6p6szdtul9zmxdrgm6x1n.js" async></script>
 
 
-<!--51LA统计-->
+<!--51LA统计代码-->
 <script type="text/javascript" src="https://js.users.51.la/21061693.js"></script>
+
+
 
 
     <!-- 搜索遮罩框 -->
