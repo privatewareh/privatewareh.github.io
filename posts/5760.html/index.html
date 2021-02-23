@@ -524,7 +524,7 @@
 <h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><pre class="line-numbers language-none"><code class="language-none">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><p>hexo clean -&gt; hexo g -&gt; hexo d</p>
 <h1 id="github搭建图床"><a href="#github搭建图床" class="headerlink" title="github搭建图床"></a>github搭建图床</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lcdm123/p/13508447.html">“配制过程”</a>按这个配置就行了。</p>
-<h1 id="hexo部署后，CNAME会被自动删除，怎么办？"><a href="#hexo部署后，CNAME会被自动删除，怎么办？" class="headerlink" title="hexo部署后，CNAME会被自动删除，怎么办？"></a>hexo部署后，CNAME会被自动删除，怎么办？</h1><h2 id="在本地生成CNAME文件"><a href="#在本地生成CNAME文件" class="headerlink" title="在本地生成CNAME文件"></a>在本地生成CNAME文件</h2><pre class="line-numbers language-none"><code class="language-none">touch CNAME     &#x2F;&#x2F;在source文件夹下生成CNAME文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="博客域名相关"><a href="#博客域名相关" class="headerlink" title="博客域名相关"></a>博客域名相关</h1><h2 id="在本地生成CNAME文件"><a href="#在本地生成CNAME文件" class="headerlink" title="在本地生成CNAME文件"></a>在本地生成CNAME文件</h2><pre class="line-numbers language-none"><code class="language-none">touch CNAME     &#x2F;&#x2F;在source文件夹下生成CNAME文件<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="自定义博客域名"><a href="#自定义博客域名" class="headerlink" title="自定义博客域名"></a>自定义博客域名</h2><ul>
 <li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/mqdxiaoxiao/article/details/92799543">Hexo个人博客绑定域名</a></p>
 </li>
@@ -532,13 +532,15 @@
 </li>
 </ul>
 <p>之后发布到github的时候，博客地址就会绑定到自定义域名。</p>
-<h2 id="解决Hexo-clean导致CNAME文件被删问题"><a href="#解决Hexo-clean导致CNAME文件被删问题" class="headerlink" title="解决Hexo clean导致CNAME文件被删问题"></a>解决Hexo clean导致CNAME文件被删问题</h2><p>整个public文件夹是执行hexo g后生成的，若执行hexo clean会把整个public连同CNAME文件夹删掉，在重新执行hexo g后生成的public文件夹里肯定没有我们手动添加的CNAME文件</p>
+<h2 id="解决Hexo-clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）"><a href="#解决Hexo-clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）" class="headerlink" title="解决Hexo clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）"></a>解决Hexo clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）</h2><p>整个public文件夹是执行hexo g后生成的，若执行hexo clean会把整个public连同CNAME文件夹删掉，在重新执行hexo g后生成的public文件夹里肯定没有我们手动添加的CNAME文件</p>
 <p>解决方法是把CNAME文件放在source文件夹下，而不是public文件夹，在执行hexo g命令时，会把source文件夹下的CNAME文件原原本本地复制到public文件夹下，即使执行hexo clean后，下次重新编译还是会复制过去，这样就解决了问题。</p>
 <p>其实还有很多其他的文件如果想编译后放在public文件夹下，都可以先放source文件夹下，在hexo g编译后就会复制到public文件夹下。</p>
+<h1 id="云服务器相关"><a href="#云服务器相关" class="headerlink" title="云服务器相关"></a>云服务器相关</h1><p>待续 ……</p>
 <h1 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37391214/article/details/100186909">按这个备份</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/baab04284923">和这个</a></p>
 <hr>
-<p>留下个任务：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/339388119/answer/783796324">用树莓派部署博客</a></p>
+<h1 id="留下个任务"><a href="#留下个任务" class="headerlink" title="留下个任务"></a>留下个任务</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/339388119/answer/783796324">用树莓派部署博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_18694071/article/details/104771390">Nanopi架设Hexo个人博客服务器</a></p>
 
                 
             </div>
