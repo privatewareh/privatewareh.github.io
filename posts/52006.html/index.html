@@ -465,9 +465,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">嵌入式学习笔记</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -495,7 +499,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-05
+                    2021-03-03
                 </div>
                 
 
@@ -552,6 +556,84 @@ V+B：               翻转板字
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013002186/article/details/103287330/">Altium Designer 18 画keepout层与将keepout层转换成Mechanical1层的方法</a></li>
 <li><a target="_blank" rel="noopener" href="http://m.elecfans.com/article/932887.html">栅格的使用</a></li>
 </ul>
+<hr>
+<h2 id="放大招"><a href="#放大招" class="headerlink" title="放大招"></a>放大招</h2><pre class="line-numbers language-none"><code class="language-none">• 原理图（网络标号，名字起的不一样，不能连接到一起）限流电阻10K
+	○ 封装（由大到小）
+		§ 1206
+		§ 0805
+		§ 0603
+		§ 0402
+		§ 电阻R打头
+		§ 电容C打头
+		§ 电感 I打头
+		§ 按键S打头
+	○ 先绘制主要部分
+		§ 电源
+			□ 给每一个供电引脚加上滤波电容，并且尽量靠近芯片
+			□ VDD、VBAT、VSS
+		§ 晶振OSC
+		§ 复位NRST
+		§ 下载口
+			□ SWCLK、SWDAT
+		§ BOOT（决定系统运行位置。）
+			□ STM32C8T6中PB2是BOOT1
+			□ 放一个2×3的排针用于插跳线帽
+	○ 再绘制电路验证部分
+		§ IO输入&#x2F;输出：
+			□ 按键（输入）：
+				® WK_UP，3.3V高电平有效，相当于一个中断
+				® 其他按键输入低电平有效
+			□ LED（输出）：
+				® 接限流电阻，输出低电平亮
+		§ 供电部分
+			1) USB供电
+			2) 通过开关控制电路通断
+			3) 放置保险丝或者用0欧电阻替代。
+				® 零欧姆电阻的作用：方便检查哪一部分模块出了问题，焊上接通，不焊断开
+			4) 大电容和小电容并联的方式进行滤波。大电容滤除低频干扰，小电容滤除高频干扰
+			5) AMS117-3.3把5V电压转换为3.3V
+			6) 最后加一个LED灯用于指示电路供电正常
+	○ UART（USB转TTL）（USB上的D+和D-引脚）
+		§ CH340G更小更节约成本
+		§ 这地方所用晶振一定是12MHz
+		§ 103 : 0.01uF。104 : 0.1uF。计算方法：10的几次方pF
+	○ 排针
+		§ 现在引出芯片上可用的IO（网络标签落点一定要在线上）
+	○ 自动添加元件注释
+		§ 接受更改，执行更改
+• PCB
+	○ 统一元器件封装
+		§ 查找相似对象
+		§ CTRL+A
+		§ 批量修改
+	○ Keep out layer 层绘制板子形状
+	○ 定原点位置
+	○ 编译一下原理图看是否有错误，在设计里面将封装导入PCB，执行更改
+	○ PCB布局
+		§ 开启栅格
+			□ 栅格编辑器：CTRL+G
+			□ 设置当前栅格的尺寸:CTRL+SHIFT+G
+		§ 接插件往板子边上靠
+		§ 放置位置 : 离接口最近的一侧
+		§ 洞洞板每个孔的间距是100mil
+		§ 查找元器件
+			□ J+C
+			□ 在原理图中选定对应器件
+		§ 将布局好的PCB备份一份，再进行布线
+	○ PCB布线
+		§ 隐藏丝印层
+		§ 设置PCB规则
+		§ 自动布线验证板子布局，在脑海中形成板子布线的初步形状
+		§ CTRL+点选可知需要连通的点
+		§ CTRL+SHIFT+向上滚轮：放置过孔。TAB键更改过孔属性，焊盘上面不要打过孔
+		§ 在工具中进行设计规则检查
+
+• 焊接
+	○ 验证是否短路，一般看供电电路是否短路，即验证滤波电容是否短路
+	○ 若没有短路，先焊接贴片，再焊接插件
+	○ 托焊焊接芯片或者用风箱吹
+	○ 焊接其他原件
+	○ 注意：烙铁温度一般325℃，焊接芯片的时候温度不要太高，焊接插件的时候可以调到380℃左右		<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -615,7 +697,11 @@ V+B：               翻转板字
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">嵌入式学习笔记</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
