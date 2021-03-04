@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ESP8266学习笔记, null">
+    <meta name="keywords" content="每一步，都算数, null">
     <meta name="description" content="一念花开 | 一念花落">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ESP8266学习笔记 | null</title>
+    <title>每一步，都算数 | null</title>
     <link rel="icon" type="image/png" href="/medias/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,7 +333,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = '4b89222ca0e8943c8250dc498774771b701f369edc28684bbf8b134fa14814bf';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -346,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ESP8266学习笔记</h1>
+                    <h1 class="description center-align post-title">每一步，都算数</h1>
                 </div>
             </div>
         </div>
@@ -465,21 +465,20 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                    <div class="article-tag">
                         
-                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="post-category">
-                                嵌入式
+                            <a href="/tags/ing/">
+                                <span class="chip bg-color">.ing</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%9B%9E%E5%BF%86%E8%AF%8D%E6%9D%A1/">
+                                <span class="chip bg-color">回忆词条</span>
                             </a>
                         
                     </div>
+                    
+                </div>
+                <div class="col s5 right-align">
                     
                 </div>
             </div>
@@ -488,14 +487,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-23
+                    2021-03-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-05
+                    2021-03-05
                 </div>
                 
 
@@ -517,27 +516,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>买这个ESP8266其实是想做一个气象站的，因为之前买了电子墨水屏，看了许多资料和教程后，打算自己在假期做一个。</p>
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="ATK-ESP8266指令"><a href="#ATK-ESP8266指令" class="headerlink" title="ATK_ESP8266指令"></a>ATK_ESP8266指令</h2><pre class="line-numbers language-none"><code class="language-none">链接WIFI：
-AT+CWMODE&#x3D;1						&#x2F;&#x2F;链接WiFi的模式	STA（station）模式
-AT+RST							&#x2F;&#x2F;重启模块
-AT+CWJAP&#x3D;&quot;名称&quot;,&quot;密码&quot;			&#x2F;&#x2F;设置WiFi名称和密码
-AT+ATKCLDSTA&#x3D;&quot;27330618291206876931&quot;,&quot;12345678&quot;		&#x2F;&#x2F;原子云网点
-AT+CWAUTOCONN&#x3D;1					&#x2F;&#x2F;设置自动链接WiFi
-
-从连网到请求数据：
-AT+CWJAP&#x3D;&quot;vivo_wdrd&quot;,&quot;aBCde520,.&quot;
-AT+CIPSTART&#x3D;&quot;TCP&quot;,&quot;api.seniverse.com&quot;,80
-AT+CIPMODE&#x3D;1						&#x2F;&#x2F;进入透传模式
-AT+CIPSEND						&#x2F;&#x2F;准备接收数据
-GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#x3D;填入公钥&amp;location&#x3D;lanzhou&amp;language&#x3D;zh-Hans&amp;unit&#x3D;c<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="GET指令接收到的数据"><a href="#GET指令接收到的数据" class="headerlink" title="GET指令接收到的数据"></a>GET指令接收到的数据</h2><pre class="line-numbers language-none"><code class="language-none">&#123;&quot;results&quot;:[&#123;&quot;location&quot;:&#123;&quot;id&quot;:&quot;WQ3V4QR6VR6G&quot;,&quot;name&quot;:&quot;兰州&quot;,&quot;country&quot;:&quot;CN&quot;,&quot;path&quot;:&quot;兰州,兰州,甘肃,中国&quot;,&quot;timezone&quot;:
-&quot;Asia&#x2F;Shanghai&quot;,&quot;timezone_offset&quot;:&quot;+08:00&quot;&#125;,&quot;now&quot;:&#123;&quot;text&quot;:&quot;晴&quot;,&quot;code&quot;:&quot;0&quot;,&quot;temperature&quot;:&quot;-2&quot;&#125;,&quot;last_update&quot;:
-&quot;2020-12-21T12:50:00+08:00&quot;&#125;]&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/xuw_xy/article/details/89521481">连接心知天气</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/a12OLTDNnC2zFHqeZcK6GQ">Keil环境下STM32工程加入cJSON</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143271178">用cJSON解析心知天气返回的数据包</a></li>
+                <h2 id="2020-01-08-2021-03-05（大二寒假）"><a href="#2020-01-08-2021-03-05（大二寒假）" class="headerlink" title="2020.01.08~2021.03.05（大二寒假）"></a>2020.01.08~2021.03.05（大二寒假）</h2><ul>
+<li>带妈妈和弟弟吃了1顿大队长火锅</li>
+<li>提前学习模电前2章</li>
+<li>学会使用电子墨水屏，中间遇到n多坑，调试代码6天+</li>
+<li>第一次使用ESP8266连接到1个云平台</li>
+<li>向学长请教了3次AD，自己绘制了2张板子</li>
+<li>去三爸家住了2天</li>
+<li>有2次背单词的记录</li>
+<li>1月20日到1月30日，一共给弟弟上了7次课</li>
+<li>带弟弟去了3次兰州中心</li>
+<li>和弟弟看了2部电影，打了1次羽毛球，走过1次中山桥</li>
+<li>去了3次兰州老街</li>
+<li>物美买米2次</li>
+<li>给妈妈帮忙4次</li>
+<li>去找宝贝2次</li>
+<li>和宝贝出去玩了5天</li>
+<li>给宝贝写了1封信，画了1张板子</li>
+<li>偷偷给宝贝准备了4处小惊喜</li>
+<li>高中聚会1次</li>
+<li>1月16日开始整理博客，拥有1个自己的域名，最终将博客更新到V1.1.1版本</li>
+<li>刷了1次抖音，玩了6天王者</li>
+<li>干了1次兼职，但没挣到情怀</li>
+<li>剩下时间在学习新知</li>
 </ul>
 
                 
@@ -565,7 +566,7 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://www.tinitial.cn/posts/20044.html/">https://www.tinitial.cn/posts/20044.html/</a>
+                    <a href="https://www.tinitial.cn/posts/8762cb1d.html/">https://www.tinitial.cn/posts/8762cb1d.html/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,7 +603,15 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ing/">
+                                    <span class="chip bg-color">.ing</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%9B%9E%E5%BF%86%E8%AF%8D%E6%9D%A1/">
+                                    <span class="chip bg-color">回忆词条</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1040,29 +1049,30 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/19874.html/">
+                <a href="/posts/8762cb1d.html/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="人生感悟">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="每一步，都算数">
                         
-                        <span class="card-title">人生感悟</span>
+                        <span class="card-title">每一步，都算数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            有哪些人生道理，是你从切身体会当中得来的
+                            人生没有白走的路，每一步都算数
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1071,11 +1081,16 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/">
-                        <span class="chip bg-color">记录生活</span>
+                    <a href="/tags/ing/">
+                        <span class="chip bg-color">.ing</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%9E%E5%BF%86%E8%AF%8D%E6%9D%A1/">
+                        <span class="chip bg-color">回忆词条</span>
                     </a>
                     
                 </div>
@@ -1089,13 +1104,13 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/52006.html/">
+                <a href="/posts/4975.html/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="AD学习笔记">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="嵌入式项目-蜂鸣器唱歌">
                         
-                        <span class="card-title">AD学习笔记</span>
+                        <span class="card-title">嵌入式项目-蜂鸣器唱歌</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1106,14 +1121,14 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="post-category">
-                                    嵌入式
+                            <a href="/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                    嵌入式项目
                                 </a>
                             
                             
@@ -1123,8 +1138,8 @@ GET https:&#x2F;&#x2F;api.seniverse.com&#x2F;v3&#x2F;weather&#x2F;now.json?key&#
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">嵌入式学习笔记</span>
+                    <a href="/tags/STM32/">
+                        <span class="chip bg-color">STM32</span>
                     </a>
                     
                 </div>

@@ -490,7 +490,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-02
+                    2021-03-05
                 </div>
                 
 
@@ -532,23 +532,25 @@
 </li>
 </ul>
 <p>之后发布到github的时候，博客地址就会绑定到自定义域名。</p>
-<h2 id="解决Hexo-clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）"><a href="#解决Hexo-clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）" class="headerlink" title="解决Hexo clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）"></a>解决Hexo clean导致CNAME文件被删问题（hexo部署后，CNAME会被自动删除，怎么办？）</h2><p>整个public文件夹是执行hexo g后生成的，若执行hexo clean会把整个public连同CNAME文件夹删掉，在重新执行hexo g后生成的public文件夹里肯定没有我们手动添加的CNAME文件</p>
+<h2 id="解决Hexo-clean导致CNAME文件被删问题"><a href="#解决Hexo-clean导致CNAME文件被删问题" class="headerlink" title="解决Hexo clean导致CNAME文件被删问题"></a>解决Hexo clean导致CNAME文件被删问题</h2><p>hexo部署后，CNAME会被自动删除，怎么办？</p>
+<p>整个public文件夹是执行hexo g后生成的，若执行hexo clean会把整个public连同CNAME文件夹删掉，在重新执行hexo g后生成的public文件夹里肯定没有我们手动添加的CNAME文件</p>
 <p>解决方法是把CNAME文件放在source文件夹下，而不是public文件夹，在执行hexo g命令时，会把source文件夹下的CNAME文件原原本本地复制到public文件夹下，即使执行hexo clean后，下次重新编译还是会复制过去，这样就解决了问题。</p>
 <p>其实还有很多其他的文件如果想编译后放在public文件夹下，都可以先放source文件夹下，在hexo g编译后就会复制到public文件夹下。</p>
 <h1 id="云服务器相关"><a href="#云服务器相关" class="headerlink" title="云服务器相关"></a>云服务器相关</h1><p>待续 ……</p>
 <h1 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37391214/article/details/100186909">按这个备份</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/baab04284923">和这个</a></p>
 <p>悄悄地告诉你个秘密，我两个都不用，因为目前不会操作，人生苦短，我用硬盘。</p>
-<blockquote>
-<h1 id="留下个任务"><a href="#留下个任务" class="headerlink" title="留下个任务"></a>留下个任务</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/339388119/answer/783796324">用树莓派部署博客</a></p>
+<h1 id="留下个任务"><a href="#留下个任务" class="headerlink" title="留下个任务"></a>留下个任务</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/339388119/answer/783796324">用树莓派部署博客</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_18694071/article/details/104771390">Nanopi架设Hexo个人博客服务器</a></p>
 </blockquote>
-<h1 id="来填坑2021-03-02"><a href="#来填坑2021-03-02" class="headerlink" title="来填坑2021.03.02"></a>来填坑2021.03.02</h1><h2 id="如何使用NANOPI"><a href="#如何使用NANOPI" class="headerlink" title="如何使用NANOPI"></a>如何使用NANOPI</h2><p>可以用PUTTY进入程序界面，也可以用XSHELL进入</p>
+<hr>
+<h1 id="2021-03-02补充"><a href="#2021-03-02补充" class="headerlink" title="2021.03.02补充"></a>2021.03.02补充</h1><h2 id="如何使用NANOPI"><a href="#如何使用NANOPI" class="headerlink" title="如何使用NANOPI"></a>如何使用NANOPI</h2><p>可以用PUTTY进入程序界面，也可以用XSHELL进入</p>
 <h2 id="静态网页和动态bai网页区别如下："><a href="#静态网页和动态bai网页区别如下：" class="headerlink" title="静态网页和动态bai网页区别如下："></a>静态网页和动态bai网页区别如下：</h2><p>静态网页是相对于动态网页而言，是指没有后台数据库、不含程序和不可交互的网页。编的是什么它显示的就是什么、不会有任何改变。静态网页相对更新起来比较麻烦，适用于一般更新较少的展示型网站。另外,如果扩展名为.asp但却没有连数据库,完全是静态的页面,那也是静态网站.只是.asp扩展名。</p>
 <p>动态网页和静态网页是有区别的，网站采用动态网页还是静态网页主要取决于网站的功能需求和网站内容的多少，如果网站功能比较简单，内容更新量不是很大，采用纯静态网页的方式会更简单，反之一般要采用动态网页技术来实现。不过现在一般的都是采用的动态网站，有内容更新的话就可以随时在后台来更新。（搬运自百度）</p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/leiziv5/p/8649742.html">Apache和Nginx对比</a></p>
-<p><strong>总结</strong>：部署博客用Nginx足以</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<p><strong>总结</strong>：部署博客用Nginx足矣</p>
+
                 
             </div>
             <hr/>
