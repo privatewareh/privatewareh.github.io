@@ -507,7 +507,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-05
+                    2021-03-19
                 </div>
                 
 
@@ -529,29 +529,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="STM32学习笔记"><a href="#STM32学习笔记" class="headerlink" title="STM32学习笔记"></a><del>STM32学习笔记</del></h1><h1 id="从入门到放弃的心路历程之STM32"><a href="#从入门到放弃的心路历程之STM32" class="headerlink" title="从入门到放弃的心路历程之STM32"></a>从入门到放弃的心路历程之STM32</h1><h2 id="STM32初探"><a href="#STM32初探" class="headerlink" title="STM32初探"></a>STM32初探</h2><p>最近跟着学长学STM32，买了块原子哥的开发板，虽说是跟着原子哥的教程学完了…额应该说是了解了STM32芯片以及它的一些电路结构、成功连接到了电脑并能跟着做一些简单的小程序，但现在我仍处于一种懵逼的状态，随便遇个坑就能把我埋了…</p>
-<p>因为我买的开发板是STM32F103NANO，所以比其他的板子更容易上手一点，话虽这么说，但还没学模电数电以及大物的我，除了发现有了板载ST-LINK不用再去单另买外置ST-LINK以外，目前真没发现有其他什么方便的地方（以后发现了再来更新）…</p>
-<p>目前攒的一点资料：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yangfengwu/tag/STM32/">STM32拓展</a>、<a target="_blank" rel="noopener" href="https://www.stmcu.org.cn/document/list/index/category-147">官网资料F1</a>、<a target="_blank" rel="noopener" href="http://www.openedv.com/thread-13912-1-1.html">正点原子</a></p>
+                <h1 id="STM32学习笔记"><a href="#STM32学习笔记" class="headerlink" title="STM32学习笔记"></a><del>STM32学习笔记</del></h1><h1 id="从入门到放弃的心路历程之STM32"><a href="#从入门到放弃的心路历程之STM32" class="headerlink" title="从入门到放弃的心路历程之STM32"></a>从入门到放弃的心路历程之STM32</h1><h2 id="STM32初探"><a href="#STM32初探" class="headerlink" title="STM32初探"></a>STM32初探</h2><p>最近跟着学长学STM32，买了块原子哥的开发板，虽说是跟着原子哥的教程学完了 …… 额应该说是了解了STM32芯片以及它的一些电路结构、成功连接到了电脑并能跟着做一些简单的小程序，但现在我仍处于一种懵逼的状态，随便遇个坑就能把我埋了 ……</p>
+<p>因为我买的开发板是正点原子STM32F103NANO，专为学习打造的它比其他板子更容易上手一点，话虽这么说，但我除了发现有了板载ST-LINK不用再去单另买外置ST-LINK以外，目前真没发现有其他什么方便的地方（以后发现了再来更新）…</p>
+<p>目前在看的一点资料：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yangfengwu/tag/STM32/">STM32拓展</a>、<a target="_blank" rel="noopener" href="https://www.stmcu.org.cn/document/list/index/category-147">官网资料F1</a>、<a target="_blank" rel="noopener" href="http://www.openedv.com/thread-13912-1-1.html">正点原子</a></p>
 <hr>
-<p><strong>2021-02-05更新</strong></p>
-<p>经历了一年的摸爬滚打，真正意义上自己动手做出来了三个项目（不算没有完工的作品），现在终于对嵌入式开发有了一点浅显的认识。</p>
-<p>补充一下NANO这块板子的一些使用感受。首先，这块板子很独特，和市面上其它的32系列单片机不同，NANO引出的引脚不多，多数被板载外设占据，对于学习来说功能丰富且足够，板载的ST-LINK既可以给内部下载，也可以当作仿真器调试另一块32单片机，一条数据线加一块NANO板就可以实现单片机开发。</p>
-<p>不得不说，我感觉NANO对于我来说更像是一艘航空母舰，因为它引出了许多电源接口、GND接口和功能引脚，可以基于这块板子再做拓展；另一方面，它作为我的STM32单片机入门开发板，我的一块踏板，意义非凡。</p>
-<p>入门总结暂时告一段落，接下来的任务就是将每一次所做的项目做一个总结，不断地提升。</p>
-<hr>
-<h2 id="no-target-connect解决方法（2020-05-26）"><a href="#no-target-connect解决方法（2020-05-26）" class="headerlink" title="no target connect解决方法（2020.05.26）"></a>no target connect解决方法（2020.05.26）</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ReCclay/article/details/84180733">文章链接</a></p>
+<h2 id="2020-05-26更新"><a href="#2020-05-26更新" class="headerlink" title="2020-05-26更新"></a><strong>2020-05-26更新</strong></h2><h3 id="no-target-connect解决方法"><a href="#no-target-connect解决方法" class="headerlink" title="no target connect解决方法"></a>no target connect解决方法</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ReCclay/article/details/84180733">文章链接</a></p>
 <p><strong>重点引用</strong></p>
 <p>解决办法：可以按住复位按键，单击下载 然后立即松开复位 就可以下载程序。</p>
 <blockquote>
 <p>这是单片机启动过程 单片机上电复位后执行的是内部的启动程序 还没有执行你 自己的程序 所以开始都是默认状态 此时SD下载引脚是初始状态。可以检测到 也能下载程序，一旦执行完启动程序后就开始执行你自己的程序 引脚就被复用或者关闭了 就不能下载了</p>
 </blockquote>
-<h2 id="SWD模式"><a href="#SWD模式" class="headerlink" title="SWD模式"></a>SWD模式</h2><p>由于ST_LINK V2.0 和 V2.1 版本的仿真器是 SWD 模式，所以需要在 ort 选项中选择“SW”，最大速度 Max 设置为 4Mhz。</p>
+<h3 id="SWD模式"><a href="#SWD模式" class="headerlink" title="SWD模式"></a>SWD模式</h3><p>由于ST_LINK V2.0 和 V2.1 版本的仿真器是 SWD 模式，所以需要在 ort 选项中选择“SW”，最大速度 Max 设置为 4Mhz。</p>
 <p>SWD下载的优势：</p>
 <blockquote>
 <p>SWD 模式比2113 JTAG 在高速模式下面更加可靠. 在大数据量的情况下面 JTAG 下载 程序会失败, 但是 SWD 发生的几率会小很多5261. 基本使用 JTAG 仿真模式的情况下是可以直接使用 SWD 模式的。</p>
 </blockquote>
 <hr>
-
+<h2 id="2021-02-05更新"><a href="#2021-02-05更新" class="headerlink" title="2021-02-05更新"></a><strong>2021-02-05更新</strong></h2><p>经历了一年的摸爬滚打，真正意义上自己动手做出来了三个项目（一个模拟驾驶小车，一个直流负载，一个可以唱歌的蜂鸣器），现在终于对嵌入式开发有了一点浅显的认识。</p>
+<p>补充对于NANO这块板子的一些使用感受。首先，这块板子很独特，和市面上其它的32系列单片机不同，NANO引出的引脚不多，多数被板载外设占据，对于学习来说功能丰富且足够，板载的ST-LINK既可以给内部下载，也可以当作仿真器调试另一块32单片机，一条数据线加一块NANO板就可以实现单片机开发。</p>
+<p>不得不说，我感觉NANO对于我来说更像是一艘航空母舰，因为它引出了许多电源接口、GND接口和功能引脚，可以基于这块板子再做拓展；另一方面，它作为我的STM32单片机入门开发板，对于我来说是一块 “ 踏板 ” ，其意义非凡。</p>
+<p>入门总结暂时告一段落，接下来的任务是将每一次所做的项目做一个总结，不断地提升。</p>
+<hr>
+<h2 id="2021-03-19更新"><a href="#2021-03-19更新" class="headerlink" title="2021-03-19更新"></a><strong>2021-03-19更新</strong></h2><p>目前遇到一个问题，用过的模块在逐步增多，但是没有系统总结过，每一次使用都要重新查找模块资料，费时费力，鉴于此，开始总结我使用过的模块以及我经常会用到的的单片机功能。</p>
+<hr>
+<h1 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h1><h2 id="OLED"><a href="#OLED" class="headerlink" title="OLED"></a>OLED</h2>
                 
             </div>
             <hr/>
@@ -1241,12 +1242,6 @@
 
 <!-- TOC 悬浮按钮. -->
 
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
 
 <script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
@@ -1286,41 +1281,6 @@
         });
 
         
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
     });
 </script>
 
@@ -1337,16 +1297,12 @@
 <style>
     .aplayer .aplayer-lrc p {
         
-        display: none;
-        
         font-size: 12px;
         font-weight: 700;
         line-height: 16px !important;
     }
 
     .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
         
         font-size: 15px;
         color: #42b983;
@@ -1369,7 +1325,7 @@
         <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
                    server="netease"
                    type="playlist"
-                   id="6621315159"
+                   id="6675705596"
                    fixed='true'
                    autoplay='true'
                    theme='#42b983'
